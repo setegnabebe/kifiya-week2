@@ -1,12 +1,12 @@
-FROM python3.10.2
+FROM python3.9-slim
 
-WORKDIR /app
+WORKDIR /
 
 COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ..
+COPY . .
 
 EXPOSE 8501
 
